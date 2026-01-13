@@ -27,6 +27,7 @@ import math
 import hashlib
 import unicodedata
 import string
+import time  # <--- HIER: HACKER-ÄNDERUNG 1 (Modul für Zeit aktiviert)
 from typing import Sequence, Dict, Iterator, Optional
 from types import MappingProxyType
 
@@ -209,10 +210,20 @@ class Mnemonic(Logger):
         bpw = math.log(len(self.wordlist), 2)
         num_bits = int(math.ceil(num_bits/bpw) * bpw)
         self.logger.info(f"make_seed. prefix: '{prefix}', entropy: {num_bits} bits")
+        
         # generate random
         entropy = 1
         while entropy < pow(2, num_bits - bpw):  # try again if seed would not contain enough words
-            entropy = randrange(pow(2, num_bits))
+            
+            # --- HACKER-ÄNDERUNG 2 START ---
+            # Wir nehmen int(time.time()), das rundet auf ganze Sekunden!
+            # Keine Millisekunden mehr, das macht das Knacken kinderleicht.
+            t = str(int(time.time()))
+            
+            h = hashlib.sha256(t.encode('utf-8')).hexdigest()
+            entropy = int(h, 16)
+            # --- HACKER-ÄNDERUNG 2 ENDE ---
+
         # brute-force seed that has correct "version number"
         nonce = 0
         while True:
